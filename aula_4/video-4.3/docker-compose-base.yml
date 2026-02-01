@@ -5,7 +5,7 @@ services:
     container_name: mongo
     image: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - ${PWD}/data/mongodb:/data/db
     environment:
@@ -25,7 +25,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: "root"
       ME_CONFIG_BASICAUTH_PASSWORD: "root"
     ports:
-      - "8081:8081" # INTERFACE: http://localhost:8081
+      - "18081:8081" # INTERFACE: http://localhost:18081
     networks:
       - ml-network
 
@@ -34,7 +34,7 @@ services:
       context: ./app
       dockerfile: Dockerfile
     ports:
-      - "8080:8080" # INTERFACE: http://localhost:8080
+      - "18080:8080" # INTERFACE: http://localhost:18080
     volumes:
       - ./app:/app
     environment:
