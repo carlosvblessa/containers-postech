@@ -1,0 +1,7 @@
+.dockerignore
+data/
+scripts/
+Dockerfile
+DockerfileOficial
+DockerfileMulti
+DockerfileDistroless
